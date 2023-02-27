@@ -16,13 +16,13 @@
 # Calculate the expenses
 # Calculate the remaining balance
 # Display "------------Travel Expenses------------"
-# Display "Location:", dest
-# Display "Initial Budget: ", budget
-# Display "Fuel: ", gas
-# Display "Accomodation:", accom
-# Display "Food:, food
+# Display "Location:           ", dest
+# Display "Initial Budget:     ", budget
+# Display "Fuel:               ", gas
+# Display "Accomodation:       ", accom
+# Display "Food:               ", food
 # Display "---------------------------------------"
-# Display "Remaining Balance:", result
+# Display "Remaining Balance:  ", result
 #
 budget = float(input('Enter budget:\n'))
 dest = input('Where are you traveling?\n')
