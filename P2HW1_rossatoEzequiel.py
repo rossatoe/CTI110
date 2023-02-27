@@ -1,0 +1,15 @@
+budget = float(input('Enter Budget:\n'))
+dest = input('Where are you traveling?\n')
+gas = float(input('How much the gas cost?\n'))
+accom = float(input('How much the accomodation cost?\n'))
+food = float(input('How much the food cost?\n'))
+expenses = gas + accom + food
+result = budget - expenses
+print('------------Travel Expenses------------')
+print('Location:', dest)
+print('Initial Budget: ', budget)
+print('Fuel:', gas)
+print('Accomodation:', accom)
+print('Food:', food)
+print('---------------------------------------')
+print ('Remaining Balance:', result)
