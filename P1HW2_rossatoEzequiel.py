@@ -15,7 +15,13 @@
 # Input food
 # sum the expenses
 # substract the expenses from the budget
-# Display "You have", result, "left on your budget after your trip to", dest
+# Display "------------Travel Expenses------------"
+# Display "Location:, dest
+# Display "Initial Budget", budget
+# Display "Fuel:", gas
+# Display "Accomodation", accom
+# Display "Food:", food
+# Display "Remaining Balance:", result
 #
 budget = float(input('Enter your Budget for this trip:\n'))
 dest = input('Where are you traveling?\n')
@@ -24,4 +30,10 @@ accom = float(input('How much the accomodation cost?\n'))
 food = float(input('How much the food cost?\n'))
 expenses = gas + accom + food
 result = budget - expenses
-print ('You have', result, 'left on your budget after your trip to', dest, end='.')
+print ('------------Travel Expenses------------')
+print ('Location:', dest)
+print ('Initial Budget', budget)
+print ('Fuel:', gas)
+print ('Accomodation', accom)
+print ('Food:', food)
+print ('Remaining Balance:', result)
