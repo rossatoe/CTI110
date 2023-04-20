@@ -6,6 +6,9 @@
 def mainLoop():
     name = ''
     employees = 0
+    totalOverPay = 0
+    totalRegPay = 0
+    totalGrossPay = 0
     name = input("Enter employee's name or Done to terminate: ")
     while name != 'Done':
         #name = input("Enter employee's name or Done to terminate: ")
@@ -14,9 +17,11 @@ def mainLoop():
         payRate = float(input("What is " + name + "'s pay rate? "))
         overPay, regPay, overTime, grossPay = calculatePays(workHrs, payRate)
         printStatements(name, workHrs, payRate, overPay, regPay, overTime, grossPay)
-        totalAccum()
+        totalOverPay += overPay
+        totalRegPay += regPay
+        totalGrossPay += grossPay
         name = input("Enter employee's name or Done to terminate: ")
-    totalPrint()
+    totalPrint(employees, totalOverPay, totalRegPay, totalGrossPay)
     
 def calculatePays(workHrs, payRate):
     if(workHrs > 40):
@@ -24,6 +29,7 @@ def calculatePays(workHrs, payRate):
         overPay = (payRate * 1.5) * overTime ;
     else:
         overTime = 0
+        overPay = 0
     regPay = payRate * 40
     grossPay = regPay + overPay
 
@@ -36,15 +42,11 @@ def printStatements(name, workHrs, payRate, overPay, regPay, overTime, grossPay)
     print('-------------------------------------------------------------------------------------------------------------')
     print(f'{workHrs:<20}{payRate:<20}{overTime:<20}{overPay:<20}{regPay:<20}{grossPay:<20}')
 
-def totalPrint():
-    print(f"Total number of employees entered: " + employees)
-    print(f"Total amount paid for overtime: " + overTime)
-    print(f"Total amount paid for regular hours: " + regPay)
-    print(f"Total amount paid in gross: " + grossPay)
-
-def totalAccum():
-    #Acumular el gross, el reg, el overtime y cantidad de empleados de todos los empleados
+def totalPrint(employees, totalOverPay, totalRegPay, totalGrossPay):
+    print(f'Total number of employees entered: {employees}')
+    print(f'Total amount paid for overtime: ${totalOverPay:.2f}')
+    print(f'Total amount paid for regular hours: ${totalRegPay:.2f}')
+    print(f'Total amount paid in gross: ${totalGrossPay}')
 
 mainLoop()
-print(f"Total number of employees entered: " + employees)
-print(f"Total amount paid for overtime: " + overTime)
+
