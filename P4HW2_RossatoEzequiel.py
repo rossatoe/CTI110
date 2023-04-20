@@ -27,10 +27,11 @@ def calculatePays(workHrs, payRate):
     if(workHrs > 40):
         overTime = workHrs - 40;
         overPay = (payRate * 1.5) * overTime ;
+        regPay = payRate * 40
     else:
         overTime = 0
         overPay = 0
-    regPay = payRate * 40
+        regPay = payRate * workHrs
     grossPay = regPay + overPay
 
     return overPay, regPay, overTime, grossPay
@@ -38,9 +39,9 @@ def calculatePays(workHrs, payRate):
 def printStatements(name, workHrs, payRate, overPay, regPay, overTime, grossPay):
     print("Employee name: ", name)
     print()
-    print(f'{"Hours Worked":<20}{"Pay Rate":<20}{"OverTime":<20}{"OverTime Pay":<20}{"RegHour Pay":<20}{"Gross Pay":<20}')
-    print('-------------------------------------------------------------------------------------------------------------')
-    print(f'{workHrs:<20}{payRate:<20}{overTime:<20}{overPay:<20}{regPay:<20}{grossPay:<20}')
+    print(f'{"Hours Worked":<20}{"Pay Rate":<20}{"OverTime":<20}{"OverTime Pay":<20}{"RegHour Pay":<20}Gross Pay')
+    print('----------------------------------------------------------------------------------------------------------------')
+    print(f'{workHrs:.1f}{" ":<17}{payRate:.2f}{" ":<17}{overTime:.1f}{" ":<16}{overPay:.2f}{" ":<17}{regPay:.2f}{" ":<15}{grossPay:.2f}')
 
 def totalPrint(employees, totalOverPay, totalRegPay, totalGrossPay):
     print(f'Total number of employees entered: {employees}')
