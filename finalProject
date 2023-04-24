@@ -5,6 +5,7 @@ body {
 #title1{
   text-align: center;
   color: green;
+  size:
 }
 #para1 {
   text-align: center;
@@ -13,9 +14,9 @@ body {
 </style>
 </head>
 <body>
-<h1 id="title1">Probando titulo</h1>
-<p id="para1">Hello World!</p>
-<p>This paragraph is not affected by the style.</p>
+<h1 id="title1">Titulo</h1>
+<p id="para1">Texto con color</p>
+<p>Texto sin color.</p>
 
 </body>
 </html>
