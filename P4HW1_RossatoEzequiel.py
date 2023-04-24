@@ -10,12 +10,12 @@ for count in range(scoreAmnt):
     count +=1
     Score = float(input(f'Enter score # {count} : '))
     if Score >= 0 and Score <= 100:
-        continue
+        scoreList.append(Score)
     else:
         print("INVALID Score entered!!!!")
         print("Score should be between 0 and 100")
         Score = float(input(f'Enter score # {count} again: '))
-    scoreList.append(Score)
+        scoreList.append(Score)
         
 print("------------Results------------")
 lowest = min(scoreList)
@@ -34,11 +34,7 @@ else:
     grade = 'D'
 print(float(f'{"Lowest Score : ":<20}{lowest}'))
 count2 = 0
-print(float(f'{"Modified List : ":<20} + end=' ''))
-for count2 in range(scoreAmnt):
-    count2 += 1
-    print(float(f'{scoreList[count2]} + end=' ''))
-print()
-print(float(f'{"Score Average: ":<20}{avrg}'))
+print(float(f'{"Modified List : ":<20}{scoreList2})
+printf'{"Score Average: ":<20}{avrg}')
 print(f'{"Grade: ":<20}{grade}')
 print("-------------------------------")
