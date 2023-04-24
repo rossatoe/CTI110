@@ -34,7 +34,6 @@ elif avrg >= 70:
 else:
     grade = 'D'
 print(f'{"Lowest Score : ":<20}{lowest}')
-print(f'{"Modified List : ":<20}{scoreList}')
 print(f'{"Modified List : ":<20}{scoreList2}')
 print(f'{"Score Average: ":<20}{avrg}')
 print(f'{"Grade: ":<20}{grade}')
