@@ -32,9 +32,9 @@ elif avrg >= 70:
     grade = 'C'
 else:
     grade = 'D'
-print(float(f'{"Lowest Score : ":<20}{lowest}'))
+print(f'{"Lowest Score : ":<20}{lowest}')
 count2 = 0
-print(float(f'{"Modified List : ":<20}{scoreList2})
-printf'{"Score Average: ":<20}{avrg}')
+print(f'{"Modified List : ":<20}{scoreList2})
+print(f'{"Score Average: ":<20}{avrg}')
 print(f'{"Grade: ":<20}{grade}')
 print("-------------------------------")
