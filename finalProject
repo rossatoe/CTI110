@@ -11,12 +11,28 @@ body {
   text-align: center;
   color: red;
 }
+h1.mix {
+border-style: dotted dashed solid double;
+border-color: blue;
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
 </style>
 </head>
 <body>
 <h1 id="title1">Titulo</h1>
+<div class="sticky">I am sticky!</div>
+<h1 class="mix">Borde para titulo.</h1>
 <p id="para1">Texto con color</p>
 <p>Texto sin color.</p>
+## Z-Index : hace que tu imagen se ponga atras de un texto
+## Float : pone una imaen al costado de un texto
 
 </body>
 </html>
